@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="#1e3a5f" role="img" aria-label="Mi porton">
+  <title>Mi porton</title>
+  <rect x="8" y="10" width="12" height="44" rx="2"/>
+  <rect x="44" y="10" width="12" height="44" rx="2"/>
+  <rect x="8" y="10" width="48" height="11" rx="2"/>
+  <rect x="8" y="52" width="48" height="5" rx="1.5"/>
+</svg>

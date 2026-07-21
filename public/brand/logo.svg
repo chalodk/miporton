@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none" role="img" aria-label="Mi portón">
+  <title>Mi portón</title>
+  <g fill="#1e3a5f">
+    <rect x="8" y="12" width="12" height="44" rx="2"/>
+    <rect x="44" y="12" width="12" height="44" rx="2"/>
+    <rect x="8" y="12" width="48" height="11" rx="2"/>
+    <rect x="8" y="54" width="48" height="5" rx="1.5"/>
+  </g>
+  <text x="78" y="48" fill="#1e3a5f" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="36" font-weight="600" letter-spacing="-0.02em">Mi portón</text>
+</svg>

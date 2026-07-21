@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Recibimos tu solicitud — Mi portón</title>
+    <!--
+      Template: confirmación de contacto (usuario)
+      Placeholders n8n (modo expresión en el nodo de email, o Replace):
+        {{nombre}} {{comunidad}} {{ciudad}} {{telefono}} {{email}} {{residentes}} {{mensaje}}
+      Logo alojado: https://miporton.cl/brand/isotype-email-on-white.png
+    -->
+  </head>
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7fb;
+      color: #0f172a;
+      font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    "
+  >
+    <div style="display: none; max-height: 0; overflow: hidden; opacity: 0">
+      Hola {{nombre}}, recibimos tu solicitud de demo para {{comunidad}}. Te
+      contactamos a la brevedad.
+    </div>
+
+    <table
+      role="presentation"
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      style="background-color: #f4f7fb; width: 100%"
+    >
+      <tr>
+        <td align="center" style="padding: 32px 16px">
+          <table
+            role="presentation"
+            width="560"
+            cellpadding="0"
+            cellspacing="0"
+            border="0"
+            style="
+              width: 100%;
+              max-width: 560px;
+              background-color: #ffffff;
+              border: 1px solid #cfd8e6;
+              border-radius: 8px;
+              overflow: hidden;
+            "
+          >
+            <!-- Header -->
+            <tr>
+              <td
+                style="
+                  background-color: #1e3a5f;
+                  padding: 28px 32px;
+                  text-align: left;
+                "
+              >
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td valign="middle" style="padding-right: 14px">
+                      <!-- Logo PNG (preferido en email) -->
+                      <img
+                        src="https://miporton.cl/brand/isotype-email-on-white.png"
+                        width="40"
+                        height="40"
+                        alt="Mi portón"
+                        style="
+                          display: block;
+                          width: 40px;
+                          height: 40px;
+                          border: 0;
+                          border-radius: 4px;
+                          background-color: #ffffff;
+                        "
+                      />
+                    </td>
+                    <td valign="middle">
+                      <div
+                        style="
+                          font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
+                          font-size: 20px;
+                          font-weight: 600;
+                          line-height: 1.2;
+                          color: #ffffff;
+                          letter-spacing: -0.02em;
+                        "
+                      >
+                        Mi portón
+                      </div>
+                      <div
+                        style="
+                          font-family: 'IBM Plex Mono', Consolas, monospace;
+                          font-size: 10px;
+                          letter-spacing: 0.14em;
+                          text-transform: uppercase;
+                          color: rgba(255, 255, 255, 0.7);
+                          padding-top: 4px;
+                        "
+                      >
+                        Portero digital
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Body -->
+            <tr>
+              <td style="padding: 36px 32px 12px 32px">
+                <p
+                  style="
+                    margin: 0 0 8px 0;
+                    font-family: 'IBM Plex Mono', Consolas, monospace;
+                    font-size: 11px;
+                    letter-spacing: 0.14em;
+                    text-transform: uppercase;
+                    color: #64748b;
+                  "
+                >
+                  Solicitud recibida
+                </p>
+                <h1
+                  style="
+                    margin: 0 0 16px 0;
+                    font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
+                    font-size: 26px;
+                    font-weight: 600;
+                    line-height: 1.25;
+                    color: #0f172a;
+                    letter-spacing: -0.02em;
+                  "
+                >
+                  Hola {{nombre}}, ya tenemos tu mensaje.
+                </h1>
+                <p
+                  style="
+                    margin: 0 0 16px 0;
+                    font-size: 16px;
+                    line-height: 1.6;
+                    color: #475569;
+                  "
+                >
+                  Gracias por interesarte en Mi portón para
+                  <strong style="color: #0f172a">{{comunidad}}</strong>.
+                  Recibimos tu solicitud de demo y te contactaremos a la
+                  brevedad.
+                </p>
+                <p
+                  style="
+                    margin: 0 0 28px 0;
+                    font-size: 16px;
+                    line-height: 1.6;
+                    color: #475569;
+                  "
+                >
+                  Mientras tanto, recuerda la idea: el residente sigue llamando
+                  como siempre; la comunidad gana control y visibilidad de
+                  acceso.
+                </p>
+              </td>
+            </tr>
+
+            <!-- Resumen -->
+            <tr>
+              <td style="padding: 0 32px 28px 32px">
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  style="
+                    width: 100%;
+                    background-color: #f4f7fb;
+                    border: 1px solid #cfd8e6;
+                    border-radius: 6px;
+                  "
+                >
+                  <tr>
+                    <td style="padding: 20px 22px">
+                      <p
+                        style="
+                          margin: 0 0 14px 0;
+                          font-family: 'IBM Plex Mono', Consolas, monospace;
+                          font-size: 11px;
+                          letter-spacing: 0.12em;
+                          text-transform: uppercase;
+                          color: #1e3a5f;
+                        "
+                      >
+                        Resumen de tu solicitud
+                      </p>
+                      <table
+                        role="presentation"
+                        width="100%"
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                        style="width: 100%; font-size: 14px; line-height: 1.5"
+                      >
+                        <tr>
+                          <td
+                            style="
+                              padding: 6px 0;
+                              color: #64748b;
+                              width: 38%;
+                              vertical-align: top;
+                            "
+                          >
+                            Comunidad
+                          </td>
+                          <td
+                            style="
+                              padding: 6px 0;
+                              color: #0f172a;
+                              font-weight: 500;
+                            "
+                          >
+                            {{comunidad}}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              padding: 6px 0;
+                              color: #64748b;
+                              vertical-align: top;
+                            "
+                          >
+                            Ciudad / región
+                          </td>
+                          <td style="padding: 6px 0; color: #0f172a">
+                            {{ciudad}}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              padding: 6px 0;
+                              color: #64748b;
+                              vertical-align: top;
+                            "
+                          >
+                            Teléfono / WhatsApp
+                          </td>
+                          <td style="padding: 6px 0; color: #0f172a">
+                            {{telefono}}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              padding: 6px 0;
+                              color: #64748b;
+                              vertical-align: top;
+                            "
+                          >
+                            Email
+                          </td>
+                          <td style="padding: 6px 0; color: #0f172a">
+                            {{email}}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              padding: 6px 0;
+                              color: #64748b;
+                              vertical-align: top;
+                            "
+                          >
+                            Residentes (aprox.)
+                          </td>
+                          <td style="padding: 6px 0; color: #0f172a">
+                            {{residentes}}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              padding: 6px 0;
+                              color: #64748b;
+                              vertical-align: top;
+                            "
+                          >
+                            Mensaje
+                          </td>
+                          <td style="padding: 6px 0; color: #0f172a">
+                            {{mensaje}}
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- CTA -->
+            <tr>
+              <td style="padding: 0 32px 36px 32px">
+                <p
+                  style="
+                    margin: 0 0 18px 0;
+                    font-size: 15px;
+                    line-height: 1.6;
+                    color: #475569;
+                  "
+                >
+                  Si necesitas agregar algo, responde este correo o escríbenos
+                  cuando quieras.
+                </p>
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td
+                      align="center"
+                      bgcolor="#1e3a5f"
+                      style="border-radius: 4px; background-color: #1e3a5f"
+                    >
+                      <a
+                        href="https://miporton.cl"
+                        target="_blank"
+                        style="
+                          display: inline-block;
+                          padding: 12px 22px;
+                          font-family: 'IBM Plex Sans', Helvetica, Arial,
+                            sans-serif;
+                          font-size: 14px;
+                          font-weight: 600;
+                          color: #ffffff;
+                          text-decoration: none;
+                          border-radius: 4px;
+                        "
+                      >
+                        Ir a Mi portón
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td
+                style="
+                  border-top: 1px solid #cfd8e6;
+                  background-color: #e8eef6;
+                  padding: 22px 32px;
+                "
+              >
+                <p
+                  style="
+                    margin: 0 0 6px 0;
+                    font-size: 13px;
+                    font-weight: 600;
+                    color: #0f172a;
+                  "
+                >
+                  Mi portón
+                </p>
+                <p
+                  style="
+                    margin: 0;
+                    font-size: 12px;
+                    line-height: 1.5;
+                    color: #64748b;
+                  "
+                >
+                  Portero digital para comunidades ·
+                  <a
+                    href="https://miporton.cl"
+                    style="color: #1e3a5f; text-decoration: none"
+                    >miporton.cl</a
+                  >
+                </p>
+              </td>
+            </tr>
+          </table>
+
+          <p
+            style="
+              margin: 20px 0 0 0;
+              max-width: 560px;
+              font-size: 11px;
+              line-height: 1.5;
+              color: #94a3b8;
+              text-align: center;
+            "
+          >
+            Recibiste este correo porque solicitaste una demo en miporton.cl.
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
