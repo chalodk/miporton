@@ -15,13 +15,21 @@ export function SiteFooter() {
           </p>
         </div>
         <div className="text-sm text-[var(--color-ink-muted)]">
-          <a
-            href="#demo"
-            className="font-medium text-[var(--color-accent)] transition hover:underline"
-          >
-            Solicitar demo
-          </a>
-          <p className="mt-3">
+          <div className="flex flex-col gap-2 sm:items-end">
+            <a
+              href="https://app.miporton.cl"
+              className="font-medium text-[var(--color-accent)] transition hover:underline"
+            >
+              Ingreso administrador
+            </a>
+            <a
+              href="#demo"
+              className="font-medium text-[var(--color-accent)] transition hover:underline"
+            >
+              Solicitar demo
+            </a>
+          </div>
+          <p className="mt-3 sm:text-right">
             © {new Date().getFullYear()} Mi portón. Chile.
           </p>
         </div>

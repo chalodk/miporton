@@ -10,7 +10,7 @@ export function SiteHeader() {
         >
           <Logo />
         </a>
-        <nav className="flex items-center gap-5 text-sm text-white/90">
+        <nav className="flex items-center gap-3 text-sm text-white/90 sm:gap-5">
           <a
             href="#como-se-vive"
             className="hidden transition hover:text-white sm:inline"
@@ -18,8 +18,20 @@ export function SiteHeader() {
             Cómo se vive
           </a>
           <a
+            href="#como-iniciar"
+            className="hidden transition hover:text-white md:inline"
+          >
+            Cómo iniciar
+          </a>
+          <a
+            href="https://app.miporton.cl"
+            className="rounded-[var(--radius-sm)] border border-white/40 px-3 py-2 font-medium text-white transition hover:border-white hover:bg-white/10 sm:px-4"
+          >
+            Ingreso administrador
+          </a>
+          <a
             href="#demo"
-            className="rounded-[var(--radius-sm)] bg-white px-4 py-2 font-medium text-[var(--color-accent)] transition hover:bg-white/90"
+            className="rounded-[var(--radius-sm)] bg-white px-3 py-2 font-medium text-[var(--color-accent)] transition hover:bg-white/90 sm:px-4"
           >
             Solicitar demo
           </a>
