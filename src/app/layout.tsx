@@ -19,18 +19,20 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://miporton.cl";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Mi portón — Portero digital para comunidades",
+    default:
+      "Mi portón — Panel de control y seguridad para el portón de tu parcelación",
     template: "%s · Mi portón",
   },
   description:
-    "El residente llama como siempre. La comunidad administra quién abre el portón y ve el historial de acceso — como un portero humano en la puerta.",
+    "Gobernanza, seguridad y control a 1 clic para comités de parcelaciones, loteos y condominios de casas. Conserva la llamada telefónica; elimina el desorden.",
   keywords: [
     "mi portón",
-    "portero digital",
-    "acceso comunidad",
-    "administración condominio",
     "parcelación",
-    "portón telefónico",
+    "loteo",
+    "condominio de casas",
+    "comité de administración",
+    "control de acceso",
+    "portón",
     "Chile",
   ],
   authors: [{ name: "Mi portón" }],
@@ -43,23 +45,25 @@ export const metadata: Metadata = {
     locale: "es_CL",
     url: siteUrl,
     siteName: "Mi portón",
-    title: "Mi portón — Portero digital para comunidades",
+    title:
+      "Mi portón — Panel de control y seguridad para el portón de tu parcelación",
     description:
-      "El residente llama como siempre. La comunidad gana control y visibilidad de acceso.",
+      "Gestiona accesos a 1 clic, audita quién entra en tiempo real y protege tu parcelación, loteo o condominio de casas.",
     images: [
       {
         url: "/hero-gate.jpg",
         width: 1920,
         height: 1080,
-        alt: "Acceso a una comunidad residencial",
+        alt: "Portón de acceso a una parcelación",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mi portón — Portero digital para comunidades",
+    title:
+      "Mi portón — Panel de control y seguridad para el portón de tu parcelación",
     description:
-      "El residente llama como siempre. La comunidad administra y ve quién intenta entrar.",
+      "Gobernanza y seguridad del portón para comités de parcelaciones y loteos.",
     images: ["/hero-gate.jpg"],
   },
   robots: {

@@ -7,6 +7,13 @@ type Status = "idle" | "loading" | "success" | "error";
 const fieldClass =
   "w-full rounded-[var(--radius-sm)] border border-[var(--color-border)] bg-white px-3.5 py-3 text-[var(--color-ink)] outline-none transition placeholder:text-[var(--color-ink-subtle)] focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent-soft)]";
 
+const tiposComunidad = [
+  "Parcelación",
+  "Loteo",
+  "Condominio de Casas",
+  "Otro",
+] as const;
+
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
@@ -29,7 +36,9 @@ export function ContactForm() {
 
       if (!res.ok) {
         setStatus("error");
-        setMessage(json.error ?? "No pudimos enviar tu solicitud. Intenta de nuevo.");
+        setMessage(
+          json.error ?? "No pudimos enviar tu solicitud. Intenta de nuevo.",
+        );
         return;
       }
 
@@ -54,14 +63,15 @@ export function ContactForm() {
             Solicitar demo
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
-            Conversemos sobre tu comunidad.
+            Agenda una demo con datos de tu parcelación.
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-[var(--color-ink-muted)]">
-          Pruébalo gratis por 15 días. <br /> Cuéntanos un poco y te contactamos.
+            Para comités de administración de parcelaciones, loteos y
+            condominios de casas. Te contactamos a la brevedad.
           </p>
           <p className="mt-6 text-base leading-relaxed text-[var(--color-ink)]">
-            El residente sigue llamando como siempre. Tú ganas el control de un
-            portero que reconoce, habilita y deja registro.
+            Conservas la llamada telefónica. Ganas gobernanza, auditoría y
+            control a 1 clic.
           </p>
         </div>
 
@@ -70,28 +80,44 @@ export function ContactForm() {
           className="space-y-4 rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-bg-elevated)] p-6 sm:p-8"
           noValidate
         >
+          <label className="block text-sm">
+            <span className="mb-1.5 block font-medium text-[var(--color-ink)]">
+              Nombre del solicitante / cargo
+            </span>
+            <input
+              name="nombre"
+              required
+              autoComplete="name"
+              className={fieldClass}
+              placeholder="Ej. Presidente de Comité, Administrador"
+            />
+          </label>
+
           <div className="grid gap-4 sm:grid-cols-2">
             <label className="block text-sm">
               <span className="mb-1.5 block font-medium text-[var(--color-ink)]">
-                Nombre
+                Tipo de comunidad
               </span>
-              <input
-                name="nombre"
-                required
-                autoComplete="name"
-                className={fieldClass}
-                placeholder="Tu nombre"
-              />
+              <select name="tipoComunidad" required className={fieldClass} defaultValue="">
+                <option value="" disabled>
+                  Selecciona…
+                </option>
+                {tiposComunidad.map((tipo) => (
+                  <option key={tipo} value={tipo}>
+                    {tipo}
+                  </option>
+                ))}
+              </select>
             </label>
             <label className="block text-sm">
               <span className="mb-1.5 block font-medium text-[var(--color-ink)]">
-                Comunidad / proyecto
+                Nombre de la parcelación / proyecto
               </span>
               <input
                 name="comunidad"
                 required
                 className={fieldClass}
-                placeholder="Nombre de la comunidad"
+                placeholder="Nombre del proyecto"
               />
             </label>
           </div>
@@ -99,16 +125,34 @@ export function ContactForm() {
           <div className="grid gap-4 sm:grid-cols-2">
             <label className="block text-sm">
               <span className="mb-1.5 block font-medium text-[var(--color-ink)]">
-                Ciudad / región
+                Comuna / región
               </span>
               <input
-                name="ciudad"
+                name="comuna"
                 required
                 autoComplete="address-level2"
                 className={fieldClass}
-                placeholder="Ej. Valparaíso"
+                placeholder="Ej. Casablanca, Valparaíso"
               />
             </label>
+            <label className="block text-sm">
+              <span className="mb-1.5 block font-medium text-[var(--color-ink)]">
+                Número de parcelas / casas{" "}
+                <span className="font-normal text-[var(--color-ink-subtle)]">
+                  opcional
+                </span>
+              </span>
+              <input
+                name="parcelas"
+                type="number"
+                min={1}
+                className={fieldClass}
+                placeholder="Ej. 80"
+              />
+            </label>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
             <label className="block text-sm">
               <span className="mb-1.5 block font-medium text-[var(--color-ink)]">
                 Teléfono / WhatsApp
@@ -122,9 +166,6 @@ export function ContactForm() {
                 placeholder="+56 9 …"
               />
             </label>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2">
             <label className="block text-sm">
               <span className="mb-1.5 block font-medium text-[var(--color-ink)]">
                 Email
@@ -136,21 +177,6 @@ export function ContactForm() {
                 autoComplete="email"
                 className={fieldClass}
                 placeholder="tu@email.cl"
-              />
-            </label>
-            <label className="block text-sm">
-              <span className="mb-1.5 block font-medium text-[var(--color-ink)]">
-                Residentes (aprox.){" "}
-                <span className="font-normal text-[var(--color-ink-subtle)]">
-                  opcional
-                </span>
-              </span>
-              <input
-                name="residentes"
-                type="number"
-                min={1}
-                className={fieldClass}
-                placeholder="Ej. 80"
               />
             </label>
           </div>
@@ -166,7 +192,7 @@ export function ContactForm() {
               name="mensaje"
               rows={4}
               className={`${fieldClass} resize-y`}
-              placeholder="Contexto breve de tu comunidad o dudas"
+              placeholder="Contexto breve de tu parcelación o dudas"
             />
           </label>
 
@@ -175,7 +201,9 @@ export function ContactForm() {
             disabled={status === "loading"}
             className="inline-flex w-full items-center justify-center rounded-[var(--radius-sm)] bg-[var(--color-accent)] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[var(--color-accent-hover)] disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
           >
-            {status === "loading" ? "Enviando…" : "Te contactamos"}
+            {status === "loading"
+              ? "Enviando…"
+              : "Solicitar Demo con Datos de mi Comunidad"}
           </button>
 
           {message ? (

@@ -2,25 +2,31 @@ import { NextResponse } from "next/server";
 
 const N8N_CONTACT_WEBHOOK =
   process.env.N8N_CONTACT_WEBHOOK_URL ??
-  "https://n8n.agroanalytics.cl/webhook/contact";
+  "https://n8n.agroanalytics.cl/webhook/contact-miporton";
 
 type DemoPayload = {
   nombre?: string;
+  tipoComunidad?: string;
   comunidad?: string;
+  comuna?: string;
+  /** @deprecated prefer comuna */
   ciudad?: string;
   telefono?: string;
   email?: string;
+  parcelas?: string;
+  /** @deprecated prefer parcelas */
   residentes?: string;
   mensaje?: string;
 };
 
 export type ContactLead = {
   nombre: string;
+  tipoComunidad: string;
   comunidad: string;
-  ciudad: string;
+  comuna: string;
   telefono: string;
   email: string;
-  residentes: string;
+  parcelas: string;
   mensaje: string;
   receivedAt: string;
   source: "miporton.cl";
@@ -50,13 +56,27 @@ export async function POST(request: Request) {
     );
   }
 
-  const { nombre, comunidad, ciudad, telefono, email, residentes, mensaje } =
-    body;
+  const {
+    nombre,
+    tipoComunidad,
+    comunidad,
+    comuna,
+    ciudad,
+    telefono,
+    email,
+    parcelas,
+    residentes,
+    mensaje,
+  } = body;
+
+  const comunaValue = isNonEmpty(comuna) ? comuna : ciudad;
+  const parcelasValue = isNonEmpty(parcelas) ? parcelas : residentes;
 
   if (
     !isNonEmpty(nombre) ||
+    !isNonEmpty(tipoComunidad) ||
     !isNonEmpty(comunidad) ||
-    !isNonEmpty(ciudad) ||
+    !isNonEmpty(comunaValue) ||
     !isNonEmpty(telefono) ||
     !isNonEmpty(email)
   ) {
@@ -75,12 +95,13 @@ export async function POST(request: Request) {
 
   const lead: ContactLead = {
     nombre: nombre.trim(),
+    tipoComunidad: tipoComunidad.trim(),
     comunidad: comunidad.trim(),
-    ciudad: ciudad.trim(),
+    comuna: comunaValue.trim(),
     telefono: telefono.trim(),
     email: email.trim(),
-    residentes: dashIfEmpty(
-      isNonEmpty(residentes) ? residentes.trim() : null,
+    parcelas: dashIfEmpty(
+      isNonEmpty(parcelasValue) ? parcelasValue.trim() : null,
     ),
     mensaje: dashIfEmpty(isNonEmpty(mensaje) ? mensaje.trim() : null),
     receivedAt: new Date().toISOString(),
@@ -92,7 +113,6 @@ export async function POST(request: Request) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(lead),
-      // Avoid hanging the form if n8n is slow
       signal: AbortSignal.timeout(12_000),
     });
 

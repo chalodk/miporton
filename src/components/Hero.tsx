@@ -10,7 +10,7 @@ export function Hero() {
       <div className="absolute inset-0 animate-hero-media">
         <Image
           src="/hero-gate.jpg"
-          alt="Portón de acceso a una comunidad residencial al atardecer"
+          alt="Portón de acceso a una parcelación residencial"
           fill
           priority
           sizes="100vw"
@@ -26,36 +26,34 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-[var(--max-content)] px-5 pb-16 pt-28 sm:px-8 sm:pb-20 md:pb-24">
-        <p className="animate-fade-up font-mono text-xs uppercase tracking-[0.18em] text-white/75">
-          Portero digital
-        </p>
-        <h1 className="animate-fade-up delay-1 mt-4 flex max-w-3xl items-center gap-4 font-sans text-[clamp(2.75rem,8vw,5.5rem)] font-semibold leading-[0.95] tracking-tight text-white sm:gap-5">
+        <p className="animate-fade-up inline-flex items-center gap-2.5 font-sans text-2xl font-semibold tracking-tight text-white sm:text-3xl">
           <Isotype
-            className="h-[0.85em] w-[0.85em] shrink-0 text-white"
+            className="h-[1.1em] w-[1.1em] shrink-0 text-white"
             title=""
             aria-hidden
           />
-          <span>Mi portón</span>
+          Mi portón
+        </p>
+        <h1 className="animate-fade-up delay-1 mt-5 max-w-3xl font-sans text-[clamp(1.85rem,5.2vw,3.25rem)] font-semibold leading-[1.12] tracking-tight text-white">
+          El Panel de Control y Seguridad para el Portón de tu Parcelación
         </h1>
-        <p className="animate-fade-up delay-2 mt-6 max-w-2xl text-xl font-medium leading-snug text-white sm:text-2xl md:text-[1.65rem]">
-          El residente llama como siempre. La comunidad ve y controla.
+        <p className="animate-fade-up delay-2 mt-5 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg md:text-xl">
+          Conserva la facilidad de la llamada telefónica, elimina el desorden.
+          Gestiona accesos a 1 clic, audita quién entra en tiempo real y protege
+          a tu parcelación, loteo o condominio de casas.
         </p>
-        <p className="animate-fade-up delay-3 mt-4 max-w-lg text-base leading-relaxed text-white/80 sm:text-lg">
-          Como un portero humano en la puerta — sin pedirle al residente que
-          cambie su forma de llegar a casa.
-        </p>
-        <div className="animate-fade-up delay-4 mt-8 flex flex-wrap items-center gap-3">
+        <div className="animate-fade-up delay-3 mt-8 flex flex-wrap items-center gap-3">
           <a
             href="#demo"
             className="inline-flex items-center justify-center rounded-[var(--radius-sm)] bg-white px-6 py-3.5 text-sm font-semibold text-[var(--color-accent)] transition hover:bg-white/90"
           >
-            Solicitar demo
+            Solicitar Demo para mi Comunidad
           </a>
           <a
-            href="#como-se-vive"
+            href="#pilares"
             className="inline-flex items-center justify-center rounded-[var(--radius-sm)] border border-white/40 px-6 py-3.5 text-sm font-medium text-white transition hover:border-white hover:bg-white/10"
           >
-            Cómo se vive
+            Ver el panel
           </a>
         </div>
       </div>

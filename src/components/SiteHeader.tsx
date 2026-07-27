@@ -12,14 +12,20 @@ export function SiteHeader() {
         </a>
         <nav className="flex items-center gap-3 text-sm text-white/90 sm:gap-5">
           <a
-            href="#como-se-vive"
+            href="#pilares"
             className="hidden transition hover:text-white sm:inline"
           >
-            Cómo se vive
+            Panel
+          </a>
+          <a
+            href="#casos"
+            className="hidden transition hover:text-white md:inline"
+          >
+            Casos
           </a>
           <a
             href="#como-iniciar"
-            className="hidden transition hover:text-white md:inline"
+            className="hidden transition hover:text-white lg:inline"
           >
             Cómo iniciar
           </a>

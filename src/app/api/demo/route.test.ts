@@ -13,12 +13,13 @@ function makeRequest(body: unknown) {
 }
 
 const validLead = {
-  nombre: "Ana Pérez",
+  nombre: "Ana Pérez · Presidente de Comité",
+  tipoComunidad: "Parcelación",
   comunidad: "Los Robles",
-  ciudad: "Viña del Mar",
+  comuna: "Casablanca, Valparaíso",
   telefono: "+56 9 1234 5678",
   email: "ana@example.cl",
-  residentes: "120",
+  parcelas: "80",
   mensaje: "Queremos una demo",
 };
 
@@ -44,7 +45,7 @@ describe("POST /api/demo", () => {
     await expect(res.json()).resolves.toEqual({ ok: true });
 
     expect(global.fetch).toHaveBeenCalledWith(
-      "https://n8n.agroanalytics.cl/webhook/contact",
+      "https://n8n.agroanalytics.cl/webhook/contact-miporton",
       expect.objectContaining({
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -57,9 +58,11 @@ describe("POST /api/demo", () => {
     ];
     const payload = JSON.parse(String(options.body)) as Record<string, string>;
     expect(payload).toMatchObject({
-      nombre: "Ana Pérez",
+      nombre: "Ana Pérez · Presidente de Comité",
+      tipoComunidad: "Parcelación",
       comunidad: "Los Robles",
-      email: "ana@example.cl",
+      comuna: "Casablanca, Valparaíso",
+      parcelas: "80",
       source: "miporton.cl",
     });
   });

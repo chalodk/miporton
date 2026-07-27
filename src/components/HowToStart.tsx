@@ -5,14 +5,14 @@ const pathYes = [
 ];
 
 const pathNo = [
-  "Nos dan acceso al dispositivo de la comunidad (o coordinamos con quien lo administra).",
+  "Nos dan acceso al dispositivo de la parcelación (o coordinamos con quien lo administra).",
   "Si hace falta, se reinicia la contraseña con el botón del equipo — es simple y lo guiamos.",
   "Agregamos el número de Mi portón.",
   "El vendedor marca desde la plataforma y validamos que el portón abre.",
 ];
 
 const checklist = [
-  "Quién administra hoy el acceso de la comunidad.",
+  "Quién administra hoy el acceso de la parcelación o loteo.",
   "Si ya pueden agregar un número al sistema actual.",
   "Si hace falta, alguien con acceso físico al equipo.",
 ];
@@ -29,17 +29,17 @@ export function HowToStart() {
           Cómo iniciar
         </p>
         <h2 className="mt-3 max-w-2xl text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
-          En la mayoría de las comunidades se parte con una llamada.
+          En la mayoría de las parcelaciones se parte con una llamada.
         </h2>
         <p className="mt-4 max-w-2xl text-lg leading-relaxed text-[var(--color-ink-muted)]">
-          Primero vemos si pueden agregar el número de Mi portón al sistema que
-          ya abre el portón. Según eso, el camino es corto.
+          Primero vemos si el comité puede agregar el número de Mi portón al
+          sistema que ya abre el portón. Según eso, el camino es corto.
         </p>
 
         <div className="mt-12 border-y border-[var(--color-border)] py-10">
           <p className="text-xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-2xl">
             ¿Pueden agregar un número nuevo al sistema de acceso de su
-            comunidad?
+            parcelación o loteo?
           </p>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-[var(--color-ink-subtle)]">
             Suele ser el listado o equipo que hoy abre el portón.

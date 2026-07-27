@@ -8,7 +8,7 @@
     <!--
       Template: confirmación de contacto (usuario)
       Placeholders n8n (modo expresión en el nodo de email, o Replace):
-        {{nombre}} {{comunidad}} {{ciudad}} {{telefono}} {{email}} {{residentes}} {{mensaje}}
+        {{nombre}} {{tipoComunidad}} {{comunidad}} {{comuna}} {{telefono}} {{email}} {{parcelas}} {{mensaje}}
       Logo alojado: https://miporton.cl/brand/isotype-email-on-white.png
     -->
   </head>
@@ -215,7 +215,28 @@
                               vertical-align: top;
                             "
                           >
-                            Comunidad
+                            Tipo
+                          </td>
+                          <td
+                            style="
+                              padding: 6px 0;
+                              color: #0f172a;
+                              font-weight: 500;
+                            "
+                          >
+                            {{tipoComunidad}}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              padding: 6px 0;
+                              color: #64748b;
+                              width: 38%;
+                              vertical-align: top;
+                            "
+                          >
+                            Parcelación / proyecto
                           </td>
                           <td
                             style="
@@ -235,10 +256,10 @@
                               vertical-align: top;
                             "
                           >
-                            Ciudad / región
+                            Comuna / región
                           </td>
                           <td style="padding: 6px 0; color: #0f172a">
-                            {{ciudad}}
+                            {{comuna}}
                           </td>
                         </tr>
                         <tr>
@@ -277,10 +298,10 @@
                               vertical-align: top;
                             "
                           >
-                            Residentes (aprox.)
+                            Parcelas / casas
                           </td>
                           <td style="padding: 6px 0; color: #0f172a">
-                            {{residentes}}
+                            {{parcelas}}
                           </td>
                         </tr>
                         <tr>
@@ -375,7 +396,7 @@
                     color: #64748b;
                   "
                 >
-                  Portero digital para comunidades ·
+                  Panel para parcelaciones y loteos ·
                   <a
                     href="https://miporton.cl"
                     style="color: #1e3a5f; text-decoration: none"
@@ -396,7 +417,7 @@
               text-align: center;
             "
           >
-            Recibiste este correo porque solicitaste una demo en miporton.cl.
+            Recibiste este correo porque solicitaste una demo para tu parcelación en miporton.cl.
           </p>
         </td>
       </tr>
