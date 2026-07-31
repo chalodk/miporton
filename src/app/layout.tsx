@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import Script from "next/script";
+import { CookieConsent } from "@/components/CookieConsent";
 import "./globals.css";
 
 const GA_MEASUREMENT_ID =
@@ -87,7 +88,33 @@ export default function RootLayout({
       className={`${ibmPlexSans.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
+        {/* Consent Mode v2: deny analytics by default; banner may update */}
+        <Script id="gtag-consent-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              analytics_storage: 'denied',
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              functionality_storage: 'granted',
+              personalization_storage: 'denied',
+              security_storage: 'granted',
+              wait_for_update: 500
+            });
+            try {
+              var stored = localStorage.getItem('miporton_consent');
+              if (stored === 'granted') {
+                gtag('consent', 'update', {
+                  analytics_storage: 'granted'
+                });
+              }
+            } catch (e) {}
+          `}
+        </Script>
         {children}
+        <CookieConsent />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
