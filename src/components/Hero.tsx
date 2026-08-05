@@ -34,6 +34,7 @@ export function Hero() {
           />
           Mi portón
         </p>
+        <br></br>
         <p
           className="animate-fade-up delay-1 mt-5 inline-flex max-w-full items-center gap-2.5 border border-white/30 bg-white/10 px-3.5 py-2 text-left text-sm text-white/95 backdrop-blur-[2px] sm:text-[0.95rem]"
           style={{ borderRadius: "var(--radius-sm)" }}
@@ -43,10 +44,10 @@ export function Hero() {
             aria-hidden
           />
           <span>
-            <span className="font-semibold">Compatible con cualquier sistema GSM</span>
+            <span className="font-semibold">Compatible con cualquier sistema de apertura telefónica</span>
             <span className="text-white/75">
               {" "}
-              · apertura por llamada telefónica
+              · GSM, RTU, etc.
             </span>
           </span>
         </p>

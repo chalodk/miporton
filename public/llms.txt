@@ -23,13 +23,20 @@
 5. Control de cuotas de números por parcela.
 6. Baja inmediata de arrendatarios o ex-personal.
 
+## Partners (distribuidores / vendedores GSM)
+
+- Página: https://miporton.cl/partners
+- Para quienes venden hardware de apertura por llamada y quieren sumar el panel a su oferta.
+- Contacto partners: WhatsApp (desde la página /partners).
+
 ## Conversión
 
-- Solicitar demo: https://miporton.cl/#demo
-- Contacto comercial vía formulario en la landing.
+- Solicitar demo (comités): https://miporton.cl/#demo
+- Partners (vendedores GSM): https://miporton.cl/partners
 
 ## Enlaces
 
 - Landing: https://miporton.cl
+- Partners: https://miporton.cl/partners
 - Cómo iniciar: https://miporton.cl/#como-iniciar
 - Panel (pilares): https://miporton.cl/#pilares
