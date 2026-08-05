@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import Script from "next/script";
 import { CookieConsent } from "@/components/CookieConsent";
+import { jsonLdScriptContent } from "@/lib/jsonLd";
 import "./globals.css";
 
 const GA_MEASUREMENT_ID =
@@ -74,6 +75,15 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: siteUrl,
   },
 };
 
@@ -87,6 +97,13 @@ export default function RootLayout({
       lang="es-CL"
       className={`${ibmPlexSans.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          // JSON-LD is static SSR metadata for crawlers; not client-executed JS.
+          dangerouslySetInnerHTML={{ __html: jsonLdScriptContent() }}
+        />
+      </head>
       <body className="min-h-full flex flex-col font-sans">
         {/* Consent Mode v2: deny analytics by default; banner may update */}
         <Script id="gtag-consent-default" strategy="beforeInteractive">

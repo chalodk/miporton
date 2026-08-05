@@ -34,15 +34,31 @@ export function Hero() {
           />
           Mi portón
         </p>
-        <h1 className="animate-fade-up delay-1 mt-5 max-w-3xl font-sans text-[clamp(1.85rem,5.2vw,3.25rem)] font-semibold leading-[1.12] tracking-tight text-white">
+        <p
+          className="animate-fade-up delay-1 mt-5 inline-flex max-w-full items-center gap-2.5 border border-white/30 bg-white/10 px-3.5 py-2 text-left text-sm text-white/95 backdrop-blur-[2px] sm:text-[0.95rem]"
+          style={{ borderRadius: "var(--radius-sm)" }}
+        >
+          <span
+            className="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-300"
+            aria-hidden
+          />
+          <span>
+            <span className="font-semibold">Compatible con cualquier sistema GSM</span>
+            <span className="text-white/75">
+              {" "}
+              · apertura por llamada telefónica
+            </span>
+          </span>
+        </p>
+        <h1 className="animate-fade-up delay-2 mt-5 max-w-3xl font-sans text-[clamp(1.85rem,5.2vw,3.25rem)] font-semibold leading-[1.12] tracking-tight text-white">
           El Panel de Control y Seguridad para el Portón de tu Parcelación
         </h1>
-        <p className="animate-fade-up delay-2 mt-5 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg md:text-xl">
+        <p className="animate-fade-up delay-3 mt-5 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg md:text-xl">
           Conserva la facilidad de la llamada telefónica, elimina el desorden.
           Gestiona accesos a 1 clic, audita quién entra en tiempo real y protege
           a tu parcelación, loteo o condominio de casas.
         </p>
-        <div className="animate-fade-up delay-3 mt-8 flex flex-wrap items-center gap-3">
+        <div className="animate-fade-up delay-4 mt-8 flex flex-wrap items-center gap-3">
           <a
             href="#demo"
             className="inline-flex items-center justify-center rounded-[var(--radius-sm)] bg-white px-6 py-3.5 text-sm font-semibold text-[var(--color-accent)] transition hover:bg-white/90"

@@ -1,0 +1,35 @@
+# Mi portón
+
+> Panel de control y seguridad para el portón de parcelaciones, loteos residenciales y condominios de casas en Chile. Compatible con cualquier sistema GSM de apertura por llamada telefónica.
+
+## Producto
+
+- Marca: Mi portón (miporton.cl)
+- App de administración: https://app.miporton.cl
+- Propuesta: el residente sigue llamando como siempre; el comité gestiona accesos a 1 clic, audita quién entra y gobierna el portón sin SMS crípticos.
+- Ideal para: comités de administración de parcelaciones, loteos y condominios de casas sin conserjería 24/7.
+
+## Compatibilidad
+
+- Compatible con sistemas GSM / apertura por llamada telefónica existentes.
+- No exige app para el residente.
+
+## Capacidades clave
+
+1. Gobernanza a 1 clic: habilitar o revocar números autorizados desde la web.
+2. Historial y trazabilidad en tiempo real de intentos de acceso.
+3. Flujos de aprobación y control de abuso (visitas / trabajadores).
+4. Pases temporales con restricción horaria y caducidad.
+5. Control de cuotas de números por parcela.
+6. Baja inmediata de arrendatarios o ex-personal.
+
+## Conversión
+
+- Solicitar demo: https://miporton.cl/#demo
+- Contacto comercial vía formulario en la landing.
+
+## Enlaces
+
+- Landing: https://miporton.cl
+- Cómo iniciar: https://miporton.cl/#como-iniciar
+- Panel (pilares): https://miporton.cl/#pilares
