@@ -4,8 +4,8 @@ const cases = [
     body: "Asigna pases temporales con restricción horaria (ej. lunes a viernes de 08:00 a 18:00) y fecha de caducidad automática.",
   },
   {
-    title: "Control de cuotas por lote",
-    body: "Establece un límite máximo de números por parcela para evitar que el portón se convierta en una puerta giratoria descontrolada.",
+    title: "Avisos que sí se escuchan",
+    body: "Caminos, festividades o comunicados del comité: el mensaje se reproduce al llamar para abrir. Quien necesita entrar, escucha — sin depender del grupo de WhatsApp.",
   },
   {
     title: "Baja inmediata de arrendatarios / ex-personal",

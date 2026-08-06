@@ -17,8 +17,8 @@ export function PartnerEntry() {
             ¿Vendes dispositivos GSM de apertura?
           </h2>
           <p className="mt-3 text-base leading-relaxed text-[var(--color-ink-muted)]">
-            Suma un panel de control a tu oferta y gana al activar comunidades.
-            Compatible con lo que ya vendes.
+            Suma un panel de control y mensajes al abrir: un argumento extra en
+            tu visita. Compatible con lo que ya vendes.
           </p>
         </div>
         <div className="flex shrink-0 flex-col gap-3 sm:items-end">

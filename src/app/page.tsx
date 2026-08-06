@@ -1,5 +1,6 @@
 import { CommitteeUseCases } from "@/components/CommitteeUseCases";
 import { ContactForm } from "@/components/ContactForm";
+import { GateMessages } from "@/components/GateMessages";
 import { Hero } from "@/components/Hero";
 import { HowToStart } from "@/components/HowToStart";
 import { PartnerEntry } from "@/components/PartnerEntry";
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <PartnerEntry />
         <ProductPillars />
+        <GateMessages />
         <CommitteeUseCases />
         <RoiComparison />
         <Testimonial />

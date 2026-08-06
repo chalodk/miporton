@@ -56,8 +56,8 @@ export function Hero() {
         </h1>
         <p className="animate-fade-up delay-3 mt-5 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg md:text-xl">
           Conserva la facilidad de la llamada telefónica, elimina el desorden.
-          Gestiona accesos a 1 clic, audita quién entra en tiempo real y protege
-          a tu parcelación, loteo o condominio de casas.
+          Gestiona accesos a 1 clic, audita quién entra en tiempo real y transmite
+          mensajes de la comunidad cada vez que llaman para abrir.
         </p>
         <div className="animate-fade-up delay-4 mt-8 flex flex-wrap items-center gap-3">
           <a
@@ -67,10 +67,10 @@ export function Hero() {
             Solicitar Demo para mi Comunidad
           </a>
           <a
-            href="#pilares"
+            href="#mensajes"
             className="inline-flex items-center justify-center rounded-[var(--radius-sm)] border border-white/40 px-6 py-3.5 text-sm font-medium text-white transition hover:border-white hover:bg-white/10"
           >
-            Ver el panel
+            Escuchar un ejemplo
           </a>
         </div>
       </div>

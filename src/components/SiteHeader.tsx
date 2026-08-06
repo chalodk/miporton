@@ -18,8 +18,14 @@ export function SiteHeader() {
             Panel
           </a>
           <a
-            href="#casos"
+            href="#mensajes"
             className="hidden transition hover:text-white md:inline"
+          >
+            Mensajes
+          </a>
+          <a
+            href="#casos"
+            className="hidden transition hover:text-white lg:inline"
           >
             Casos
           </a>

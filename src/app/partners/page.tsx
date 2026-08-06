@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Logo } from "@/components/BrandMark";
+import { GateMessageDemo } from "@/components/GateMessageDemo";
 import { PartnerWhatsAppButton } from "@/components/PartnerWhatsAppButton";
 import { SiteFooter } from "@/components/SiteFooter";
 
@@ -27,7 +28,7 @@ const steps = [
   {
     n: "02",
     title: "Activan Mi portón sobre ese acceso",
-    body: "El residente sigue llamando como siempre. El comité administra altas, bajas e historial desde la web — sin SMS crípticos.",
+    body: "El residente sigue llamando como siempre. El comité administra altas, bajas e historial desde la web — y puede reproducir un mensaje de la comunidad al abrir.",
   },
   {
     n: "03",
@@ -49,6 +50,10 @@ const benefits = [
     title: "Compatible con lo que ya vendes",
     body: "Pensado para sistemas GSM de apertura por llamada. Encaja con tu catálogo; no lo reemplaza.",
   },
+  {
+    title: "Oferta más completa sin nuevo stock",
+    body: "El comité suma panel y canal de avisos al llamar. Tú sigues vendiendo e instalando el GSM de siempre — con un argumento extra en la visita.",
+  },
 ];
 
 const faqs = [
@@ -59,6 +64,10 @@ const faqs = [
   {
     q: "¿Reemplaza mi equipo?",
     a: "No. Potencia la venta: el hardware abre; el panel da control, historial y baja inmediata de accesos.",
+  },
+  {
+    q: "¿Qué gano yo como vendedor con los mensajes al llamar?",
+    a: "Diferencias tu propuesta: el comité obtiene avisos con escucha garantizada (caminos, festividades, comunicados) sin hardware nuevo. Facilita el cierre y el upsell de activación del panel.",
   },
   {
     q: "¿Qué tengo que hacer yo?",
@@ -152,7 +161,7 @@ export default function PartnersPage() {
             <h2 className="mt-3 max-w-2xl text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
               Más valor en tu oferta. Mejor rotación en el terreno.
             </h2>
-            <ul className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
+            <ul className="mt-12 grid gap-10 sm:grid-cols-2 lg:gap-x-10 lg:gap-y-12">
               {benefits.map((item, i) => (
                 <li key={item.title}>
                   <span className="font-mono text-sm text-[var(--color-accent)]">
@@ -170,10 +179,34 @@ export default function PartnersPage() {
           </div>
         </section>
 
+        {/* Mensajes demo — argumento comercial */}
+        <section
+          id="mensajes"
+          className="scroll-mt-8 border-b border-[var(--color-border)] bg-[var(--color-bg-deep)]"
+          style={{ paddingBlock: "var(--space-section)" }}
+        >
+          <div className="mx-auto grid max-w-[var(--max-content)] items-start gap-10 px-5 sm:px-8 lg:grid-cols-2 lg:gap-14">
+            <div>
+              <p className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--color-ink-subtle)]">
+                Argumento de venta
+              </p>
+              <h2 className="mt-3 max-w-xl text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
+                Diferencia tu oferta: avisos con escucha garantizada.
+              </h2>
+              <p className="mt-4 max-w-xl text-lg leading-relaxed text-[var(--color-ink-muted)]">
+                El comité suma un canal de mensajes al llamar para abrir — sin
+                hardware nuevo. Tú ofreces más valor en la misma visita, sobre el
+                GSM que ya instalas.
+              </p>
+            </div>
+            <GateMessageDemo compact />
+          </div>
+        </section>
+
         {/* How it works */}
         <section
           id="como-funciona"
-          className="scroll-mt-8 bg-[var(--color-bg-deep)]"
+          className="scroll-mt-8 bg-[var(--color-bg)]"
           style={{ paddingBlock: "var(--space-section)" }}
         >
           <div className="mx-auto max-w-[var(--max-content)] px-5 sm:px-8">
